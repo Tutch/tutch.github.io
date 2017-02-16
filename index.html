@@ -175,6 +175,12 @@
             dots: true,
             appendDots: $('#slicknav')
           });
+
+          var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+          if (isMobile.matches) {
+            $.fn.fullpage.destroy();
+          }
       });
     </script>
     <script type="text/javascript" src="slick/slick.min.js"></script>

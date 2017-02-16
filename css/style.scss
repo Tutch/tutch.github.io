@@ -29,8 +29,8 @@ $fweight-bold: 700;
 
 // BREAK
 
-$break-small: 712px;
-$break-medium: 1200px;
+$break-small: 760px;
+$break-medium: 1024px;
 
 
 @import 'animations';
@@ -381,6 +381,10 @@ nav{
 
     @media screen and (max-width: $break-medium) {
       margin-top: 12% !important;
+    }
+
+    @media screen and (max-width: $break-small) {
+      width: 60% !important;
     }
   }
 
