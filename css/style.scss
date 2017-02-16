@@ -92,6 +92,11 @@ a{
   animation: fadein 1.5s;
 }
 
+.white-bg{
+  background-color: $white;
+}
+
+
 /*
 =============================================================
  INTRO
@@ -212,7 +217,6 @@ nav{
   -moz-transition:.2s;
   -webkit-transition:.2s;
   transition:.2s;
-  border-radius: 50%;
 
   animation: rotateCounterclockwise 1s;
 
@@ -295,7 +299,6 @@ nav{
     float: left;
     width: 42%;
     height: auto;
-    background-color: white;
     border-radius: 50%;
 
     @media screen and (max-width: $break-medium) {

@@ -4,6 +4,12 @@
     <title>Lucas Mapurunga</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ffffff">
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Open Sans -->
@@ -25,7 +31,7 @@
       <section id="intro" class="section" class="section" data-anchor="inicio">
         <header>
           <h1>Lucas Mapurunga</h1>
-          <h3>Frase ainda não decidida :^)</h3>
+          <h3>Desenvolvedor de coisas variadas</h3>
         </header>
         <nav>
           <ul>
@@ -67,14 +73,14 @@
       <section id="work" class="section" data-anchor="trabalhos">
         <div id="work_slides">
           <div class="work_content">
-            <img src="img/eu.jpg" alt="Lucas Mapurunga" title="Euzinho em pixels">
+            <img src="img/telegram.png" alt="Logo do Telegram - um avião de papel branco em um círculo azul" title="Telegram">
             <div>
               <header>
                 <h1>Exile Bot</h1>
                 <h2>Desenvolvedor</h2>
               </header>
 
-              <p>Exile Bot é um bot para o programa  <a href="https://telegram.me/PathOfExileBot">Telegram</a>, um programa de chat mobile, web e desktop.<br/><br/>
+              <p>Exile Bot é um bot para o programa  <a href="https://telegram.org/">Telegram</a>, um programa de chat mobile, web e desktop.<br/><br/>
 
                 Utilizando a API do Telegram, o bot foi desenvolvido para auxiliar os jogadores de Path of Exile, fornecendo
                 algumas funcionalides e facilitando a busca de termos e items na wiki.<br/><br/>
@@ -88,7 +94,7 @@
             </div>
           </div>
           <div class="work_content">
-            <img src="img/eu.jpg" alt="Lucas Mapurunga" title="Euzinho em pixels">
+            <img src="img/castpotion.png" class="white-bg" alt="Logo CastPotion - uma garrafa roxa de fones de ouvido " title="CastPotion">
             <div>
               <header>
                 <h1>Website CastPotion</h1>
@@ -107,7 +113,7 @@
             </div>
           </div>
           <div class="work_content">
-            <img src="img/eu.jpg" alt="Lucas Mapurunga" title="Euzinho em pixels">
+            <img src="img/gedai.png" alt="Globo terreste com grupos de pessoas de mãos dadas. Ao redor do globo, existem listras e mãos." title="Gedai">
             <div>
               <header>
                 <h1>Website Gedai</h1>
@@ -125,7 +131,7 @@
             </div>
           </div>
           <div class="work_content">
-            <img src="img/eu.jpg" alt="Lucas Mapurunga" title="Euzinho em pixels">
+            <img src="img/blank.jpg" alt="Faixas coloridas com um placar número com quatro zeros. Acima do placar, está escrito a palavra Score." title="Blank_">
             <div>
               <header>
                 <h1>Blank_</h1>
@@ -152,23 +158,15 @@
           $('#fullpage').fullpage({
             anchors:['inicio','sobre', 'trabalhos'],
 
-            /*afterLoad: function(anchorLink, index){
-               var loadedSection = $(this);
+              onLeave: function(index, nextIndex, direction){
+                var leavingSection = $(this);
 
-               //using anchorLink
-               if(anchorLink == 'sobre'){
-                   $('.photo').addClass('in-view');
-               },*/
-               onLeave: function(index, nextIndex, direction){
-              var leavingSection = $(this);
-
-              //after leaving section 2
-              if(nextIndex == 2){
-                $('#about').children().addClass('in-view');
-              }else if(nextIndex == 3){
-                $('#work').children().addClass('in-view');
+                if(nextIndex == 2){
+                  $('#about').children().addClass('in-view');
+                }else if(nextIndex == 3){
+                  $('#work').children().addClass('in-view');
+                }
               }
-          }
 
           });
 
