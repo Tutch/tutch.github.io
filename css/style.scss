@@ -237,7 +237,7 @@ nav{
 
   .photo img{
     width: 18%;
-    min-width: 200px;
+    min-width: 18px;
     border-radius: 50%;
   }
 
@@ -263,7 +263,7 @@ nav{
     width: 30%;
     display: inline-block;
     text-align: center;
-    min-width: 300px;
+    min-width: 340px;
 
     @media screen and (max-width: $break-medium) {
       width: 50% !important;
@@ -401,7 +401,6 @@ nav{
 
   @media screen and (max-width: $break-medium) {
     width: 20% !important;
-    margin-top: 16% !important;
   }
 
   button{
