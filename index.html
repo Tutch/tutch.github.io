@@ -155,7 +155,6 @@
       $(document).ready(function() {
           $('#fullpage').fullpage({
             anchors:['inicio','sobre', 'trabalhos'],
-
               onLeave: function(index, nextIndex, direction){
                 var leavingSection = $(this);
 
@@ -179,7 +178,7 @@
           var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
           if (isMobile.matches) {
-            $.fn.fullpage.destroy();
+            $.fn.fullpage.setAutoScrolling(false);
           }
       });
     </script>
