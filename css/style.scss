@@ -234,10 +234,9 @@ nav{
   background-color: $aboutBGColor;
   text-align: center;
 
-
   .photo img{
     width: 18%;
-    min-width: 18px;
+    min-width: 140px;
     border-radius: 50%;
   }
 
@@ -246,6 +245,11 @@ nav{
     font-size: em($font-size-about-title);
     font-weight: $fweight-semibold;
     margin:0;
+
+    @media screen and (max-width: $break-small) {
+      font-size: $font-size-about-title * 0.7 !important;
+      font-size: em($font-size-about-title * 0.7) !important;
+    }
   }
 
   h3{
@@ -295,6 +299,10 @@ nav{
 
   @media screen and (max-width: $break-medium) {
     width: 80%;
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 90%;
   }
 }
 
@@ -403,6 +411,10 @@ nav{
     width: 20% !important;
   }
 
+  @media screen and (max-width: $break-small) {
+    top: 0 !important;
+  }
+
   button{
     display: none;
     width: 20px;
@@ -452,4 +464,8 @@ nav{
 #slicknav{
   background-color: $introBGColor;
   height: 10px;
+
+  @media screen and (max-width: $break-small) {
+    background-color: $workBGColor;
+  }
 }
