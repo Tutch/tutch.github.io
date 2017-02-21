@@ -130,7 +130,7 @@ section div{
 nav{
   font-size: $font-size-nav;
   text-align: center;
-  margin-top: 24vh;
+  margin-top: 14%;
   font-weight: $fweight-semibold;
 
   @include animation(2.5s, 'fadein');
@@ -177,7 +177,7 @@ nav{
 
   header{
     text-align: center;
-    padding-top: 22vh;
+    padding-top: 15%;
   }
 
   h1{
@@ -242,9 +242,11 @@ nav{
     width: 18%;
     min-width: 140px;
     border-radius: 50%;
+  }
 
+  .photo{
     @media screen and (max-width: $break-small) {
-      display: none;
+      display: none !important;
     }
   }
 
