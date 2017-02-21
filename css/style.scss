@@ -311,6 +311,7 @@ nav{
 #work_slides{
   width: 54%;
   margin: 0 auto;
+  margin-top: 2%;
 
   @media screen and (max-width: $break-medium) {
     width: 80%;
@@ -322,8 +323,6 @@ nav{
 }
 
 .work_content{
-
-  margin-top: 2%;
 
   img{
     float: left;
@@ -423,7 +422,7 @@ nav{
   text-align: center;
   padding: 0;
   margin: 0 auto;
-  margin-top: 8%;
+  margin-top: 10%;
   position: relative;
   top: -6px;
   background-color: $workBGColor;
