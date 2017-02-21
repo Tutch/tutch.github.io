@@ -57,6 +57,24 @@ $browser-context: 16;
   @return $pixels / $context * 1em;
 }
 
+@mixin animation($duration, $animation){
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
 /*
 =============================================================
  GENERAL DOCUMENT SETTINGS
@@ -67,6 +85,7 @@ h1 { font-weight: $fweight-bold;}
 h2,h3 { font-weight: $fweight-regular ;}
 
 body{
+  background-color: $workBGColor;
   font-family: 'Open Sans', sans-serif;
   font-weight: $fweight-regular;
   width: 100%;
@@ -114,12 +133,7 @@ nav{
   margin-top: 24vh;
   font-weight: $fweight-semibold;
 
-
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 3s; /* Firefox < 16 */
-      -ms-animation: fadein 3s; /* Internet Explorer */
-       -o-animation: fadein 3s; /* Opera < 12.1 */
-          animation: fadein 3s;
+  @include animation(2.5s, 'fadein');
 
   ul{
     display: inline-block;
@@ -171,13 +185,7 @@ nav{
     font-size: em($font-size-large);
     margin:0;
 
-    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 1s; /* Firefox < 16 */
-        -ms-animation: fadein 1s; /* Internet Explorer */
-         -o-animation: fadein 1s; /* Opera < 12.1 */
-            animation: fadein 1s;
-
-
+    @include animation(1s, 'fadein');
 
     @media screen and (max-width: $break-small) {
       font-size: em($font-size-large) * 0.7;
@@ -190,11 +198,7 @@ nav{
     font-size: $font-size-large-aux;
     margin: 1% 0;
 
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+    @include animation(2s, 'fadein');
   }
 
 }
@@ -210,7 +214,8 @@ nav{
 }
 
 .fa{
-  animation: rotateClockwise 0.5s;
+  @include animation(0.5s, 'rotateClockwise');
+
   border-radius: 50%;
 }
 
@@ -223,8 +228,7 @@ nav{
   -webkit-transition:.2s;
   transition:.2s;
 
-  animation: rotateCounterclockwise 1s;
-
+  @include animation(1s, 'rotateCounterclockwise');
 
   color: $white;
   background-color: $blue;
@@ -238,6 +242,10 @@ nav{
     width: 18%;
     min-width: 140px;
     border-radius: 50%;
+
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
   }
 
   h2{
@@ -271,6 +279,11 @@ nav{
 
     @media screen and (max-width: $break-medium) {
       width: 50% !important;
+    }
+
+    @media screen and (max-width: $break-small) {
+      width: 90% !important;
+      min-width: 0 !important;
     }
   }
 
