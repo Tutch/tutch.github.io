@@ -1,3 +1,3 @@
 $(window).load(function() {
-	$("#loadBlock").fadeOut("slow");;
+	$("#loadBlock").fadeOut("fast");;
 });
