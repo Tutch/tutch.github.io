@@ -164,13 +164,9 @@ nav{
   }
 
   li{
-    background-color: $introBGColor;
     display: block;
     float: left;
     padding: 6px 10px 6px 10px;
-
-
-
   }
 
   li:first-child{
@@ -192,7 +188,37 @@ nav{
 }
 
 #intro{
-  background-color: $introBGColor;
+  //background-color: $introBGColor;
+  /*background: url('../img/mandala-gotica2.png');
+  background-position:center;
+  background-repeat:no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;*/
+
+  .bgCreditos{
+    font-weight: $fweight-light;
+    display: block;
+    text-align: center;
+  }
+
+  .bgCreditos a{
+    font-weight: $fweight-regular;
+    color: $white;
+  }
+
+  .bgCreditos a:hover{
+    color: $blue;
+    font-weight: $fweight-regular;
+    text-decoration: none;
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+  }
 
   header{
     text-align: center;
@@ -258,8 +284,8 @@ nav{
   text-align: center;
 
   .photo img{
-    width: 18%;
-    min-width: 140px;
+    width: 15%;
+    min-width: 120px;
     border-radius: 50%;
   }
 
@@ -274,6 +300,11 @@ nav{
     font-size: em($font-size-about-title);
     font-weight: $fweight-semibold;
     margin:0;
+
+    @media screen and (max-width: $break-medium) {
+      font-size: $font-size-about-title * 0.8 !important;
+      font-size: em($font-size-about-title * 0.8) !important;
+    }
 
     @media screen and (max-width: $break-small) {
       font-size: $font-size-about-title * 0.7 !important;
@@ -293,13 +324,13 @@ nav{
     font-size: em($font-size-regular);
     font-weight: 300;
     margin-top: 1.2%;
-    width: 30%;
+    width: 32%;
     display: inline-block;
     text-align: center;
     min-width: 340px;
 
     @media screen and (max-width: $break-medium) {
-      width: 50% !important;
+      width: 60% !important;
     }
 
     @media screen and (max-width: $break-small) {
