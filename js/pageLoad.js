@@ -1,11 +1,12 @@
 let rootPage = 'https://tutch.github.io/';
 
-function redirectToPage() {
+function redirectToPage(callback) {
 	let userLang = navigator.language || navigator.userLanguage
 	
 	if (!userLang.startsWith('pt') && window.location.href == rootPage) {
 		window.location.href = './en/index.html';
 	}	
+	callback();
 }
 
 function setup() {
@@ -43,10 +44,10 @@ function setup() {
 }
 
 $(window).load(function() {
-	$('#loadBlock').fadeOut('fast');;
-
-	redirectToPage();
-	setup();
+	redirectToPage(() => {
+		$('#loadBlock').fadeOut('fast');;
+		setup();
+	});
 });
 	
 
