@@ -25,11 +25,11 @@
     <!-- INTRO -->
       <div id="loadBlock"></div>
       <section id="intro" class="section fp-auto-height-responsive" data-anchor="inicio">
-        <!--<span class="bgCreditos">Imagem de fundo por <a href="https://www.behance.net/isadorasanec94">Isadora Aires</a></span>-->
         <header>
           <h1>Lucas Mapurunga</h1>
-          <h3>Desenvolvedor de coisas variadas</h3>
+          <h3 lang="pt">Desenvolvedor de coisas variadas</h3>
         </header>
+        
         <nav>
           <ul>
             <li><a href="#sobre">Sobre Mim</a></li>
@@ -146,39 +146,6 @@
         <div id="slicknav"></div>
       </section>
     </div>
-    <script>
-      $(document).ready(function() {
-          $('#fullpage').fullpage({
-            anchors:['inicio','sobre', 'trabalhos'],
-              onLeave: function(index, nextIndex, direction){
-                var leavingSection = $(this);
-
-                if(nextIndex == 2){
-                  $('#about').children().addClass('in-view');
-                }else if(nextIndex == 3){
-                  $('#work').children().addClass('in-view');
-                }
-              }
-
-          });
-
-          $('#work_slides').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 12000,
-            appendDots: $('#slicknav')
-          });
-
-          var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-
-          if (isMobile.matches) {
-            $.fn.fullpage.setAutoScrolling(false);
-          }
-      });
-    </script>
     <!-- fullPage.js -->
     <link rel="stylesheet" type="text/css" href="fullpage/jquery.fullPage.css">
     <script type="text/javascript" src="fullpage/jquery.fullPage.min.js"></script>
